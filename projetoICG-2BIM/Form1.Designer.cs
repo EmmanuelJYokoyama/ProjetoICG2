@@ -30,6 +30,9 @@ namespace projetoICG_2BIM
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,9 +47,6 @@ namespace projetoICG_2BIM
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,6 +75,34 @@ namespace projetoICG_2BIM
             this.panel1.Size = new System.Drawing.Size(1214, 97);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.Brown;
+            this.button9.Location = new System.Drawing.Point(788, 62);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(25, 23);
+            this.button9.TabIndex = 18;
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.OrangeRed;
+            this.button8.Location = new System.Drawing.Point(788, 39);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(25, 23);
+            this.button8.TabIndex = 17;
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Red;
+            this.button7.Location = new System.Drawing.Point(788, 15);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(25, 23);
+            this.button7.TabIndex = 16;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // label5
             // 
@@ -234,38 +262,11 @@ namespace projetoICG_2BIM
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Red;
-            this.button7.Location = new System.Drawing.Point(788, 15);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(25, 23);
-            this.button7.TabIndex = 16;
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.OrangeRed;
-            this.button8.Location = new System.Drawing.Point(788, 39);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(25, 23);
-            this.button8.TabIndex = 17;
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.Brown;
-            this.button9.Location = new System.Drawing.Point(788, 62);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(25, 23);
-            this.button9.TabIndex = 18;
-            this.button9.UseVisualStyleBackColor = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1212, 779);
+            this.ClientSize = new System.Drawing.Size(1212, 749);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";

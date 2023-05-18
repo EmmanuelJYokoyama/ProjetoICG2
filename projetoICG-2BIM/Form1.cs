@@ -25,7 +25,9 @@ namespace projetoICG_2BIM
         int pontosClicados = 0;
         int desenhoClicado = 0;
         Pen pen;
-
+        int[] rgb = new int[3];
+        float[] linha = new float[10];
+        int estilo = 0;
         public void DesenhaRetangulo(PaintEventArgs e, Pen caneta, int x, int y, int altura, int largura)
         {
             //DesenhaRetangulo(e, pen, coordenadas[pos], coordenadas[pos + 1], coordenadas[pos + 2], coordenadas[pos + 3]);
@@ -110,8 +112,12 @@ namespace projetoICG_2BIM
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            Color cores = cor(e, 255, 0, 0);
-            pen = caneta(e,Color.Black, esp);
+            Color cores = cor(e, rgb[0], rgb[1], rgb[2]);
+            if (estilo == 0)
+                pen = caneta(e, cores, esp);
+            else
+                //pen = caneta(e, cores, esp);
+                pen = estiloLinha(e, cores, 0, linha);
 
             if (desenhoClicado == 1)
             {
@@ -123,7 +129,7 @@ namespace projetoICG_2BIM
                 if (string.IsNullOrEmpty(textBox1.Text) == false)
                 {
                     int raio = int.Parse(textBox1.Text);
-                    circulo(coordenadas[0], coordenadas[1], raio, Color.Black, e);
+                    circulo(coordenadas[0], coordenadas[1], raio, cores, e);
                 }
             }
             else if (desenhoClicado == 3)
@@ -226,8 +232,12 @@ namespace projetoICG_2BIM
             switch (itemSelecionado)
             {
                 case 0:
-                    float[] linha = { 5, 2, 1, 2 };
-                  //  estiloLinha(e, cor, esp, linha);
+                    linha[0] = 5;
+                    linha[1] = 2;
+                    linha[2] = 1;
+                    linha[3] = 2;
+                    //estilo = 1;
+                    //dps tira o coment de cima pra funfa
                     break;
 
                 case 1:
@@ -241,7 +251,7 @@ namespace projetoICG_2BIM
 
                 case 4:
                     break;
-
+            
 
             }
             MessageBox.Show(comboBox1.SelectedIndex.ToString());
@@ -251,6 +261,7 @@ namespace projetoICG_2BIM
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             //expessura
+            esp = comboBox2.SelectedIndex;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -272,6 +283,14 @@ namespace projetoICG_2BIM
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            //botao vermelho
+            rgb[0] = 255 ;
+            rgb[1] = 0 ;
+            rgb[2] = 0 ;
         }
     }
 }
