@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace projetoICG_2BIM
 {
@@ -25,6 +26,9 @@ namespace projetoICG_2BIM
         int pontosClicados = 0;
         int desenhoClicado = 0;
         Pen pen;
+        int raio = 0;
+        int altura = 0;
+        int largura = 0;
         int[] rgb = new int[3];
         float[] linha = new float[10];
         int estilo = 0;
@@ -54,6 +58,23 @@ namespace projetoICG_2BIM
             }
 
             e.Graphics.DrawRectangle(caneta, x, y, altura, largura);
+        }
+
+        void elipse(PaintEventArgs e, int xc, int yc, int raiox, int raioy)
+        {
+            Color cores = cor(e, rgb[0], rgb[1], rgb[2]);
+            int x;
+            int y;
+            double teta;
+            for (int i = 0; i < 360; i++)
+            {
+                teta = i * Math.PI / 180;
+                x = (int)(xc + raiox * Math.Cos(teta));
+                y = (int)(yc + raioy * Math.Sin(teta));
+                ponto(x, y, cores, e);
+
+            }
+
         }
 
         void circulo(int xc, int yc, int raio, Color cor, PaintEventArgs e)
@@ -103,20 +124,49 @@ namespace projetoICG_2BIM
             e.Graphics.DrawLine(caneta, x0, y0, x1, y1);
         }
         
-    
+        public void losango(PaintEventArgs e, Pen caneta, int x1, int y1)
+        {
+            int yUp = y1 + 100;
+            int yDown = y1 - 100;
+            int xR = x1 + 50;
+            int xL = x1 - 50;
+
+            DesenhaLinha(e, caneta,xR,y1,x1, yDown);
+            DesenhaLinha(e, caneta, x1, yDown, xL,y1);
+            DesenhaLinha(e, caneta, xL, y1, x1, yUp);
+            DesenhaLinha(e, caneta, x1, yUp, xR, y1);
+
+        }
+
+        public void pentagono(PaintEventArgs e, Pen caneta, int x1, int y1)
+        {
+            int xR1 = x1 + 100;
+            int xL1 = x1 - 100;
+            int xR2 = xR1 - 50;
+            int xL2 = xL1 + 50;
+            int yDown = y1 + 100;
+            int yUp = y1 - 100;
+
+            DesenhaLinha(e, caneta, xR1, y1, x1, yUp);
+            DesenhaLinha(e, caneta, x1, yUp, xL1, y1);
+            DesenhaLinha(e, caneta, xL1, y1, xL2, yDown);
+            DesenhaLinha(e, caneta, xL2, yDown, xR2, yDown);
+            DesenhaLinha(e, caneta, xR2, yDown, xR1, y1);
+        }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Color cores = cor(e, rgb[0], rgb[1], rgb[2]);
+
             if (estilo == 0)
                 pen = caneta(e, cores, esp);
             else
-                //pen = caneta(e, cores, esp);
+                
                 pen = estiloLinha(e, cores, 0, linha);
 
             if (desenhoClicado == 1)
@@ -125,19 +175,28 @@ namespace projetoICG_2BIM
             }
             else if (desenhoClicado == 2) 
             {
-
-                if (string.IsNullOrEmpty(textBox1.Text) == false)
-                {
-                    int raio = int.Parse(textBox1.Text);
-                    circulo(coordenadas[0], coordenadas[1], raio, cores, e);
-                }
+                circulo(coordenadas[0], coordenadas[1], raio, cores, e);
+                
             }
             else if (desenhoClicado == 3)
             {
                 triangulo(e, pen, coordenadas[0], coordenadas[1], coordenadas[2], coordenadas[3], coordenadas[4], coordenadas[5]);
-            } else if (desenhoClicado == 5)
+            }
+            else if (desenhoClicado == 4)
+            {
+                losango(e, pen, coordenadas[0], coordenadas[1]);
+            }
+            else if (desenhoClicado == 5)
             {
                 DesenhaRetangulo(e, pen, coordenadas[pos], coordenadas[pos + 1], coordenadas[pos + 2], coordenadas[pos + 3]);
+            }
+            else if (desenhoClicado == 6)
+            {
+                pentagono(e, pen, coordenadas[0], coordenadas[1]);
+            }
+            else if (desenhoClicado == 7)
+            {
+                elipse(e, coordenadas[0], coordenadas[1], altura, largura);
             }
 
 
@@ -156,6 +215,7 @@ namespace projetoICG_2BIM
         {
             //circulo
             desenhoClicado = 2;
+            raio =  int.Parse(Interaction.InputBox("Informe o raio do circulo","Raio Circulo" , "0", 100, 100));
 
         }
 
@@ -207,7 +267,7 @@ namespace projetoICG_2BIM
                 pos = 0;
             }
 
-            if(desenhoClicado == 2)
+            if(desenhoClicado == 2 || desenhoClicado == 4 || desenhoClicado == 6 || desenhoClicado == 7)
             {
                 coordenadas[pos++] = e.X;
                 coordenadas[pos++] = e.Y;
@@ -355,6 +415,15 @@ namespace projetoICG_2BIM
             rgb[0] = 255;
             rgb[1] = 128;
             rgb[2] = 0;
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            //botao elipse
+            desenhoClicado = 7;
+            altura = int.Parse(Interaction.InputBox("Informe a Altura da elipse", "Elipse Altura", "0", 100, 100));
+            largura = int.Parse(Interaction.InputBox("Informe o Largura da Elipse", "Elipse Largura", "0", 100, 200));
+
         }
     }
 }
