@@ -287,10 +287,74 @@ namespace projetoICG_2BIM
 
         private void button7_Click(object sender, EventArgs e)
         {
-            //botao vermelho
-            rgb[0] = 255 ;
+            //botao preto
+            rgb[0] = 0 ;
             rgb[1] = 0 ;
             rgb[2] = 0 ;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            //botao branco
+            rgb[0] = 255;
+            rgb[1] = 255;
+            rgb[2] = 255;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            //botao cinza padrao
+            rgb[0] = 127;
+            rgb[1] = 127;
+            rgb[2] = 127;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            //botao cinza claro
+            rgb[0] = 180;
+            rgb[1] = 180;
+            rgb[2] = 180;
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            //botao marrom
+            rgb[0] = 128;
+            rgb[1] = 0;
+            rgb[2] = 0;
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            //botao marrom-claro
+            rgb[0] = 150;
+            rgb[1] = 0;
+            rgb[2] = 0;
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            //botao vermelho
+            rgb[0] = 255;
+            rgb[1] = 0;
+            rgb[2] = 0;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            //botao rosa
+            rgb[0] = 255;
+            rgb[1] = 192;
+            rgb[2] = 255;
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            //botao laranja
+            rgb[0] = 255;
+            rgb[1] = 128;
+            rgb[2] = 0;
         }
     }
 }

@@ -71,3 +71,22 @@ C:\Users\aluno\Downloads\ProjetoICG2-main (1)\ProjetoICG2-main\projetoICG-2BIM\o
 C:\Users\aluno\Downloads\ProjetoICG2-main (1)\ProjetoICG2-main\projetoICG-2BIM\obj\Debug\net5.0-windows\ref\projetoICG-2BIM.dll
 C:\Users\aluno\Downloads\ProjetoICG2-main (1)\ProjetoICG2-main\projetoICG-2BIM\obj\Debug\net5.0-windows\projetoICG-2BIM.pdb
 C:\Users\aluno\Downloads\ProjetoICG2-main (1)\ProjetoICG2-main\projetoICG-2BIM\obj\Debug\net5.0-windows\projetoICG-2BIM.genruntimeconfig.cache
+D:\Programação\C#\ProjetoICG2\projetoICG-2BIM\bin\Debug\net5.0-windows\projetoICG-2BIM.exe
+D:\Programação\C#\ProjetoICG2\projetoICG-2BIM\bin\Debug\net5.0-windows\projetoICG-2BIM.deps.json
+D:\Programação\C#\ProjetoICG2\projetoICG-2BIM\bin\Debug\net5.0-windows\projetoICG-2BIM.runtimeconfig.json
+D:\Programação\C#\ProjetoICG2\projetoICG-2BIM\bin\Debug\net5.0-windows\projetoICG-2BIM.runtimeconfig.dev.json
+D:\Programação\C#\ProjetoICG2\projetoICG-2BIM\bin\Debug\net5.0-windows\projetoICG-2BIM.dll
+D:\Programação\C#\ProjetoICG2\projetoICG-2BIM\bin\Debug\net5.0-windows\ref\projetoICG-2BIM.dll
+D:\Programação\C#\ProjetoICG2\projetoICG-2BIM\bin\Debug\net5.0-windows\projetoICG-2BIM.pdb
+D:\Programação\C#\ProjetoICG2\projetoICG-2BIM\obj\Debug\net5.0-windows\projetoICG-2BIM.csproj.AssemblyReference.cache
+D:\Programação\C#\ProjetoICG2\projetoICG-2BIM\obj\Debug\net5.0-windows\projetoICG_2BIM.Form1.resources
+D:\Programação\C#\ProjetoICG2\projetoICG-2BIM\obj\Debug\net5.0-windows\projetoICG_2BIM.Properties.Resources.resources
+D:\Programação\C#\ProjetoICG2\projetoICG-2BIM\obj\Debug\net5.0-windows\projetoICG-2BIM.csproj.GenerateResource.cache
+D:\Programação\C#\ProjetoICG2\projetoICG-2BIM\obj\Debug\net5.0-windows\projetoICG-2BIM.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programação\C#\ProjetoICG2\projetoICG-2BIM\obj\Debug\net5.0-windows\projetoICG-2BIM.AssemblyInfoInputs.cache
+D:\Programação\C#\ProjetoICG2\projetoICG-2BIM\obj\Debug\net5.0-windows\projetoICG-2BIM.AssemblyInfo.cs
+D:\Programação\C#\ProjetoICG2\projetoICG-2BIM\obj\Debug\net5.0-windows\projetoICG-2BIM.csproj.CoreCompileInputs.cache
+D:\Programação\C#\ProjetoICG2\projetoICG-2BIM\obj\Debug\net5.0-windows\projetoICG-2BIM.dll
+D:\Programação\C#\ProjetoICG2\projetoICG-2BIM\obj\Debug\net5.0-windows\ref\projetoICG-2BIM.dll
+D:\Programação\C#\ProjetoICG2\projetoICG-2BIM\obj\Debug\net5.0-windows\projetoICG-2BIM.pdb
+D:\Programação\C#\ProjetoICG2\projetoICG-2BIM\obj\Debug\net5.0-windows\projetoICG-2BIM.genruntimeconfig.cache
