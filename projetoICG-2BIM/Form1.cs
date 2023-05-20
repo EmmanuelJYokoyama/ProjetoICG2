@@ -215,7 +215,12 @@ namespace projetoICG_2BIM
         {
             //circulo
             desenhoClicado = 2;
-            raio =  int.Parse(Interaction.InputBox("Informe o raio do circulo","Raio Circulo" , "0", 100, 100));
+            string r = Interaction.InputBox("Informe o raio do circulo", "Raio Circulo", "0", 100, 100);
+            while (string.IsNullOrEmpty(r) == true)
+            {
+                r = Interaction.InputBox("Informe a Largura corretamente!", "Elipse Altura", "0", 100, 100);
+            }
+            raio = int.Parse(r);
 
         }
 
@@ -421,9 +426,26 @@ namespace projetoICG_2BIM
         {
             //botao elipse
             desenhoClicado = 7;
-            altura = int.Parse(Interaction.InputBox("Informe a Altura da elipse", "Elipse Altura", "0", 100, 100));
-            largura = int.Parse(Interaction.InputBox("Informe o Largura da Elipse", "Elipse Largura", "0", 100, 200));
+            string alt = Interaction.InputBox("Informe a Altura da elipse", "Elipse Altura", "0", 100, 100);
+            
+            while(string.IsNullOrEmpty(alt) == true)                       
+            {
+                 alt = Interaction.InputBox("Informe a Altura corretamente!", "Elipse Altura", "0", 100, 100);
+            }
+            string larg = Interaction.InputBox("Informe a Largura da elipse", "Elipse Altura", "0", 100, 100);
+            while (string.IsNullOrEmpty(larg) == true)
+            {
+                larg = Interaction.InputBox("Informe a Largura corretamente!", "Elipse Altura", "0", 100, 100);
+            }
 
+            altura = int.Parse(alt);
+            largura = int.Parse(larg);
+
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            //laranja claro
         }
     }
 }

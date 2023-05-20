@@ -219,6 +219,7 @@ namespace projetoICG_2BIM
             this.button17.Size = new System.Drawing.Size(25, 23);
             this.button17.TabIndex = 22;
             this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // button12
             // 

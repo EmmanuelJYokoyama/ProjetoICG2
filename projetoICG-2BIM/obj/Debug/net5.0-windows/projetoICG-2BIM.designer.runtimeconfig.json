@@ -6,9 +6,8 @@
       "version": "5.0.0"
     },
     "additionalProbingPaths": [
-      "C:\\Users\\aluno\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\aluno\\.nuget\\packages",
-      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      "C:\\Users\\emman\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\emman\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
