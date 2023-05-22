@@ -59,12 +59,20 @@ namespace projetoICG_2BIM
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button28 = new System.Windows.Forms.Button();
+            this.button29 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.button29);
+            this.panel1.Controls.Add(this.button28);
             this.panel1.Controls.Add(this.button27);
             this.panel1.Controls.Add(this.button19);
             this.panel1.Controls.Add(this.button20);
@@ -119,6 +127,7 @@ namespace projetoICG_2BIM
             this.button19.Size = new System.Drawing.Size(25, 23);
             this.button19.TabIndex = 31;
             this.button19.UseVisualStyleBackColor = false;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // button20
             // 
@@ -128,6 +137,7 @@ namespace projetoICG_2BIM
             this.button20.Size = new System.Drawing.Size(25, 23);
             this.button20.TabIndex = 32;
             this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // button21
             // 
@@ -137,6 +147,7 @@ namespace projetoICG_2BIM
             this.button21.Size = new System.Drawing.Size(25, 23);
             this.button21.TabIndex = 29;
             this.button21.UseVisualStyleBackColor = false;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // button22
             // 
@@ -146,6 +157,7 @@ namespace projetoICG_2BIM
             this.button22.Size = new System.Drawing.Size(25, 23);
             this.button22.TabIndex = 27;
             this.button22.UseVisualStyleBackColor = false;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // button23
             // 
@@ -155,6 +167,7 @@ namespace projetoICG_2BIM
             this.button23.Size = new System.Drawing.Size(25, 23);
             this.button23.TabIndex = 30;
             this.button23.UseVisualStyleBackColor = false;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
             // button24
             // 
@@ -164,15 +177,17 @@ namespace projetoICG_2BIM
             this.button24.Size = new System.Drawing.Size(25, 23);
             this.button24.TabIndex = 25;
             this.button24.UseVisualStyleBackColor = false;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // button25
             // 
-            this.button25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button25.BackColor = System.Drawing.Color.Lime;
             this.button25.Location = new System.Drawing.Point(975, 39);
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(25, 23);
             this.button25.TabIndex = 28;
             this.button25.UseVisualStyleBackColor = false;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
             // button26
             // 
@@ -182,6 +197,7 @@ namespace projetoICG_2BIM
             this.button26.Size = new System.Drawing.Size(25, 23);
             this.button26.TabIndex = 26;
             this.button26.UseVisualStyleBackColor = false;
+            this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
             // button15
             // 
@@ -191,6 +207,7 @@ namespace projetoICG_2BIM
             this.button15.Size = new System.Drawing.Size(25, 23);
             this.button15.TabIndex = 24;
             this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button11
             // 
@@ -210,6 +227,7 @@ namespace projetoICG_2BIM
             this.button16.Size = new System.Drawing.Size(25, 23);
             this.button16.TabIndex = 23;
             this.button16.UseVisualStyleBackColor = false;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // button17
             // 
@@ -311,7 +329,7 @@ namespace projetoICG_2BIM
             "3",
             "4",
             "5"});
-            this.comboBox2.Location = new System.Drawing.Point(535, 16);
+            this.comboBox2.Location = new System.Drawing.Point(519, 16);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 23);
             this.comboBox2.TabIndex = 7;
@@ -328,7 +346,7 @@ namespace projetoICG_2BIM
             "- . - .",
             "— - . - — . - — ",
             "- —  .. —  - .."});
-            this.comboBox1.Location = new System.Drawing.Point(535, 45);
+            this.comboBox1.Location = new System.Drawing.Point(519, 45);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 6;
@@ -401,6 +419,43 @@ namespace projetoICG_2BIM
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button28
+            // 
+            this.button28.BackColor = System.Drawing.Color.White;
+            this.button28.Location = new System.Drawing.Point(655, 16);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(52, 46);
+            this.button28.TabIndex = 34;
+            this.button28.UseVisualStyleBackColor = false;
+            this.button28.Click += new System.EventHandler(this.button28_Click);
+            // 
+            // button29
+            // 
+            this.button29.BackColor = System.Drawing.Color.White;
+            this.button29.Location = new System.Drawing.Point(713, 25);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(40, 37);
+            this.button29.TabIndex = 35;
+            this.button29.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(663, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 15);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Cor 1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(718, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 15);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "Cor 2";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -413,6 +468,7 @@ namespace projetoICG_2BIM
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -449,6 +505,10 @@ namespace projetoICG_2BIM
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button27;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button29;
+        private System.Windows.Forms.Button button28;
     }
 }
 

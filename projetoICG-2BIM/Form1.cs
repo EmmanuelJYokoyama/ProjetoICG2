@@ -162,6 +162,7 @@ namespace projetoICG_2BIM
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Color cores = cor(e, rgb[0], rgb[1], rgb[2]);
+            button28.BackColor = cores;
 
             if (estilo == 0)
                 pen = caneta(e, cores, esp);
@@ -329,26 +330,6 @@ namespace projetoICG_2BIM
             esp = comboBox2.SelectedIndex;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            //raio
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            //altura
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button7_Click(object sender, EventArgs e)
         {
@@ -369,17 +350,17 @@ namespace projetoICG_2BIM
         private void button8_Click(object sender, EventArgs e)
         {
             //botao cinza padrao
-            rgb[0] = 127;
-            rgb[1] = 127;
-            rgb[2] = 127;
+            rgb[0] = 128;
+            rgb[1] = 128; 
+            rgb[2] = 128;
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             //botao cinza claro
-            rgb[0] = 180;
-            rgb[1] = 180;
-            rgb[2] = 180;
+            rgb[0] = 192;
+            rgb[1] = 192;
+            rgb[2] = 192;
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -393,9 +374,9 @@ namespace projetoICG_2BIM
         private void button13_Click(object sender, EventArgs e)
         {
             //botao marrom-claro
-            rgb[0] = 150;
-            rgb[1] = 0;
-            rgb[2] = 0;
+            rgb[0] = 210;
+            rgb[1] = 105;
+            rgb[2] = 30;
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -446,6 +427,103 @@ namespace projetoICG_2BIM
         private void button17_Click(object sender, EventArgs e)
         {
             //laranja claro
+            rgb[0] = 255;
+            rgb[1] = 192;
+            rgb[2] = 128;
+
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            //amarelo 
+            rgb[0] = 255;
+            rgb[1] = 255;
+            rgb[2] = 0;
+
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            //amarelo claro
+
+            rgb[0] = 255;
+            rgb[1] = 255;
+            rgb[2] = 192;
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+            //verde escuro
+            rgb[0] = 0;
+            rgb[1] = 128;
+            rgb[2] = 0;
+
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            //verde claro
+            rgb[0] = 0;
+            rgb[1] = 255;
+            rgb[2] = 0;
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            //ciano escuro
+            rgb[0] = 0;
+            rgb[1] = 192;
+            rgb[2] = 255;
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            //ciano
+            rgb[0] = 0;
+            rgb[1] = 255;
+            rgb[2] = 255;
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            //azul
+            rgb[0] = 0;
+            rgb[1] = 0;
+            rgb[2] = 255;
+
+
+            
+
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            //roxo claro
+            rgb[0] = 138;
+            rgb[1] = 43;
+            rgb[2] = 226;
+
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            //roxo mais claro
+            rgb[0] = 192;
+            rgb[1] = 192;
+            rgb[2] = 255;
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            //anil
+            rgb[0] = 128;
+            rgb[1] = 128;
+            rgb[2] = 255;
+        }
+
+        private void button28_Click(object sender, EventArgs e)
+        {
+            //botao cor principal
         }
     }
 }
