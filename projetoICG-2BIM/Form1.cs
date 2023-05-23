@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
+using System.IO;
 
 namespace projetoICG_2BIM
 {
@@ -163,6 +164,7 @@ namespace projetoICG_2BIM
         {
             Color cores = cor(e, rgb[0], rgb[1], rgb[2]);
             button28.BackColor = cores;
+           
 
             if (estilo == 0)
                 pen = caneta(e, cores, esp);
@@ -524,6 +526,74 @@ namespace projetoICG_2BIM
         private void button28_Click(object sender, EventArgs e)
         {
             //botao cor principal
+        }
+
+        private void button30_Click(object sender, EventArgs e)
+        {
+            //gravar txt
+            string nomeArquivo = Interaction.InputBox("Informe o nome do arquivo", "Arquivo", "0", 100, 100);
+            while (string.IsNullOrEmpty(nomeArquivo) == true)
+            {
+                nomeArquivo = Interaction.InputBox("Informe o nome do arquivo!", "Arquivo", "0", 100, 100);
+            }
+
+            string caminho = @"D:/Programação/C#/ProjetoICG2/Arquivos/"+nomeArquivo+".txt";
+
+            File.AppendAllText(caminho, qtdPontos.ToString()+Environment.NewLine);
+
+            for(int x = 1; x<= coordenadas.Length; x++)
+            {
+                File.AppendAllText(caminho, coordenadas[x].ToString() + Environment.NewLine);
+            }
+
+            for(int y = 0; y < 3; y++)
+            {
+                File.AppendAllText(caminho, rgb[y].ToString() + Environment.NewLine);
+            }
+
+            File.AppendAllText(caminho, esp.ToString() + Environment.NewLine);
+           
+           
+
+        }
+
+        private void button32_Click(object sender, EventArgs e)
+        {
+            //LER ARQUIVO
+            openFileDialog1.ShowDialog();
+            string nomeArquivo = openFileDialog1.FileName ;
+            string caminho = nomeArquivo ;
+            string[] lines = System.IO.File.ReadAllLines(caminho);
+            qtdPontos = int.Parse( lines[0]);
+            int ultimaLinha = 0;
+            int ultimaLinha2 = 0;
+            int contRGB = 0;
+
+            if( == 2)
+            {
+                desenhoClicado = 1;
+            }
+
+            for (int i = 1; i <= qtdPontos*2; i++)
+            {
+                coordenadas[i] = int.Parse(lines[i]);
+                ultimaLinha = i;    //cria essa variavel ali fora
+                MessageBox.Show(lines[i]);
+            }   
+
+            MessageBox.Show("=-=-=-=--=-==--");
+
+            for (int i = ultimaLinha + 1; i <= ultimaLinha + 3; i++)
+            {
+                rgb[contRGB] = int.Parse(lines[i]);
+                contRGB++;
+
+                ultimaLinha2 = i;
+                MessageBox.Show(lines[i]);
+            }
+            esp = (ultimaLinha2+1);
+
+            Invalidate();
         }
     }
 }

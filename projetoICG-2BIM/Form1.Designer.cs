@@ -30,6 +30,11 @@ namespace projetoICG_2BIM
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button30 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button29 = new System.Windows.Forms.Button();
+            this.button28 = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
@@ -59,16 +64,16 @@ namespace projetoICG_2BIM
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.button32 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.Controls.Add(this.button32);
+            this.panel1.Controls.Add(this.button30);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button29);
@@ -107,6 +112,53 @@ namespace projetoICG_2BIM
             this.panel1.Size = new System.Drawing.Size(1214, 97);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button30
+            // 
+            this.button30.Location = new System.Drawing.Point(1126, 16);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(74, 23);
+            this.button30.TabIndex = 38;
+            this.button30.Text = "Gravar TXT";
+            this.button30.UseVisualStyleBackColor = true;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(718, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 15);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "Cor 2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(663, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 15);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Cor 1";
+            // 
+            // button29
+            // 
+            this.button29.BackColor = System.Drawing.Color.White;
+            this.button29.Location = new System.Drawing.Point(713, 25);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(40, 37);
+            this.button29.TabIndex = 35;
+            this.button29.UseVisualStyleBackColor = false;
+            // 
+            // button28
+            // 
+            this.button28.BackColor = System.Drawing.Color.White;
+            this.button28.Location = new System.Drawing.Point(655, 16);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(52, 46);
+            this.button28.TabIndex = 34;
+            this.button28.UseVisualStyleBackColor = false;
+            this.button28.Click += new System.EventHandler(this.button28_Click);
             // 
             // button27
             // 
@@ -419,42 +471,19 @@ namespace projetoICG_2BIM
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button28
+            // openFileDialog1
             // 
-            this.button28.BackColor = System.Drawing.Color.White;
-            this.button28.Location = new System.Drawing.Point(655, 16);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(52, 46);
-            this.button28.TabIndex = 34;
-            this.button28.UseVisualStyleBackColor = false;
-            this.button28.Click += new System.EventHandler(this.button28_Click);
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // button29
+            // button32
             // 
-            this.button29.BackColor = System.Drawing.Color.White;
-            this.button29.Location = new System.Drawing.Point(713, 25);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(40, 37);
-            this.button29.TabIndex = 35;
-            this.button29.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(663, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 15);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "Cor 1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(718, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 15);
-            this.label2.TabIndex = 37;
-            this.label2.Text = "Cor 2";
+            this.button32.Location = new System.Drawing.Point(1126, 44);
+            this.button32.Name = "button32";
+            this.button32.Size = new System.Drawing.Size(74, 23);
+            this.button32.TabIndex = 39;
+            this.button32.Text = "Ler TXT";
+            this.button32.UseVisualStyleBackColor = true;
+            this.button32.Click += new System.EventHandler(this.button32_Click);
             // 
             // Form1
             // 
@@ -509,6 +538,10 @@ namespace projetoICG_2BIM
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button29;
         private System.Windows.Forms.Button button28;
+        private System.Windows.Forms.Button button30;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button button31;
+        private System.Windows.Forms.Button button32;
     }
 }
 
