@@ -537,23 +537,103 @@ namespace projetoICG_2BIM
                 nomeArquivo = Interaction.InputBox("Informe o nome do arquivo!", "Arquivo", "0", 100, 100);
             }
 
-            string caminho = @"D:/Programação/C#/ProjetoICG2/Arquivos/"+nomeArquivo+".txt";
+            string caminho = @"D:\Programação\C#\ProjetoICG2\Arquivos\" + nomeArquivo + ".dat";
 
-            File.AppendAllText(caminho, qtdPontos.ToString()+Environment.NewLine);
-
-            for(int x = 1; x<= coordenadas.Length; x++)
+            if (desenhoClicado == 1)
             {
-                File.AppendAllText(caminho, coordenadas[x].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, desenhoClicado.ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, qtdPontos.ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, coordenadas[0].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, coordenadas[1].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, coordenadas[2].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, coordenadas[3].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, rgb[0].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, rgb[1].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, rgb[2].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, esp.ToString() + Environment.NewLine);
+                Invalidate();
             }
-
-            for(int y = 0; y < 3; y++)
+            else if (desenhoClicado == 2)
             {
-                File.AppendAllText(caminho, rgb[y].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, desenhoClicado.ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, coordenadas[0].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, coordenadas[1].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, raio.ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, rgb[0].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, rgb[1].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, rgb[2].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, esp.ToString() + Environment.NewLine);
+                Invalidate();
             }
+            else if (desenhoClicado == 3)
+            {
 
-            File.AppendAllText(caminho, esp.ToString() + Environment.NewLine);
-           
-           
+                File.AppendAllText(caminho, desenhoClicado.ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, qtdPontos.ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, coordenadas[0].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, coordenadas[1].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, coordenadas[2].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, coordenadas[3].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, coordenadas[4].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, coordenadas[5].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, rgb[0].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, rgb[1].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, rgb[2].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, esp.ToString() + Environment.NewLine);
+                Invalidate();
+            }
+            else if (desenhoClicado == 4)
+            {
+                File.AppendAllText(caminho, desenhoClicado.ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, qtdPontos.ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, coordenadas[0].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, coordenadas[1].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, rgb[0].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, rgb[1].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, rgb[2].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, esp.ToString() + Environment.NewLine);
+                Invalidate();
+            }
+            else if (desenhoClicado == 5)
+            {
+                File.AppendAllText(caminho, desenhoClicado.ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, qtdPontos.ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, coordenadas[0].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, coordenadas[1].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, coordenadas[2].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, coordenadas[3].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, rgb[0].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, rgb[1].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, rgb[2].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, esp.ToString() + Environment.NewLine);
+                Invalidate();
+            }
+            else if (desenhoClicado == 6)
+            {
+                File.AppendAllText(caminho, desenhoClicado.ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, qtdPontos.ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, coordenadas[0].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, coordenadas[1].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, rgb[0].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, rgb[1].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, rgb[2].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, esp.ToString() + Environment.NewLine);
+                Invalidate();
+            }
+            else if (desenhoClicado == 7)
+            {
+                File.AppendAllText(caminho, desenhoClicado.ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, qtdPontos.ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, coordenadas[0].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, coordenadas[1].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, altura.ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, largura.ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, rgb[0].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, rgb[1].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, rgb[2].ToString() + Environment.NewLine);
+                File.AppendAllText(caminho, esp.ToString() + Environment.NewLine);
+                Invalidate();
+            }
 
         }
 
@@ -561,39 +641,101 @@ namespace projetoICG_2BIM
         {
             //LER ARQUIVO
             openFileDialog1.ShowDialog();
-            string nomeArquivo = openFileDialog1.FileName ;
-            string caminho = nomeArquivo ;
-            string[] lines = System.IO.File.ReadAllLines(caminho);
-            qtdPontos = int.Parse( lines[0]);
+            string nomeArquivo = openFileDialog1.FileName;
+
+            string[] lines = System.IO.File.ReadAllLines(nomeArquivo);
+            desenhoClicado = int.Parse(lines[0]);
             int ultimaLinha = 0;
             int ultimaLinha2 = 0;
             int contRGB = 0;
 
-            if( == 2)
+            if (desenhoClicado == 1)
             {
-                desenhoClicado = 1;
+                qtdPontos = int.Parse(lines[1]);
+                coordenadas[0] = int.Parse(lines[2]);
+                coordenadas[1] = int.Parse(lines[3]);
+                coordenadas[2] = int.Parse(lines[4]);
+                coordenadas[3] = int.Parse(lines[5]);
+                rgb[0] = int.Parse(lines[6]);
+                rgb[1] = int.Parse(lines[7]);
+                rgb[2] = int.Parse(lines[8]);
+                esp = int.Parse(lines[9]);
+                Invalidate();
             }
-
-            for (int i = 1; i <= qtdPontos*2; i++)
+            else if (desenhoClicado == 2)
             {
-                coordenadas[i] = int.Parse(lines[i]);
-                ultimaLinha = i;    //cria essa variavel ali fora
-                MessageBox.Show(lines[i]);
-            }   
-
-            MessageBox.Show("=-=-=-=--=-==--");
-
-            for (int i = ultimaLinha + 1; i <= ultimaLinha + 3; i++)
-            {
-                rgb[contRGB] = int.Parse(lines[i]);
-                contRGB++;
-
-                ultimaLinha2 = i;
-                MessageBox.Show(lines[i]);
+                coordenadas[0] = int.Parse(lines[1]);
+                coordenadas[1] = int.Parse(lines[2]);
+                raio = int.Parse(lines[3]);
+                rgb[0] = int.Parse(lines[4]);
+                rgb[1] = int.Parse(lines[5]);
+                rgb[2] = int.Parse(lines[6]);
+                esp = int.Parse(lines[7]);
+                Invalidate();
             }
-            esp = (ultimaLinha2+1);
-
-            Invalidate();
+            else if (desenhoClicado == 3)
+            {
+                qtdPontos = int.Parse(lines[1]);
+                coordenadas[0] = int.Parse(lines[2]);
+                coordenadas[1] = int.Parse(lines[3]);
+                coordenadas[2] = int.Parse(lines[4]);
+                coordenadas[3] = int.Parse(lines[5]);
+                coordenadas[4] = int.Parse(lines[6]);
+                coordenadas[5] = int.Parse(lines[7]);
+                rgb[0] = int.Parse(lines[8]);
+                rgb[1] = int.Parse(lines[9]);
+                rgb[2] = int.Parse(lines[10]);
+                esp = int.Parse(lines[11]);
+                Invalidate();
+            }
+            else if (desenhoClicado == 4)
+            {
+                qtdPontos = int.Parse(lines[1]);
+                coordenadas[0] = int.Parse(lines[2]);
+                coordenadas[1] = int.Parse(lines[3]);
+                rgb[0] = int.Parse(lines[4]);
+                rgb[1] = int.Parse(lines[5]);
+                rgb[2] = int.Parse(lines[6]);
+                esp = int.Parse(lines[7]);
+                Invalidate();
+            }
+            else if (desenhoClicado == 5)
+            {
+                qtdPontos = int.Parse(lines[1]);
+                coordenadas[0] = int.Parse(lines[2]);
+                coordenadas[1] = int.Parse(lines[3]);
+                coordenadas[2] = int.Parse(lines[4]);
+                coordenadas[3] = int.Parse(lines[5]);
+                rgb[0] = int.Parse(lines[6]);
+                rgb[1] = int.Parse(lines[7]);
+                rgb[2] = int.Parse(lines[8]);
+                esp = int.Parse(lines[9]);
+                Invalidate();
+            }
+            else if (desenhoClicado == 6)
+            {
+                qtdPontos = int.Parse(lines[1]);
+                coordenadas[0] = int.Parse(lines[2]);
+                coordenadas[1] = int.Parse(lines[3]);
+                rgb[0] = int.Parse(lines[4]);
+                rgb[1] = int.Parse(lines[5]);
+                rgb[2] = int.Parse(lines[6]);
+                esp = int.Parse(lines[7]);
+                Invalidate();
+            }
+            else if (desenhoClicado == 7)
+            {
+                qtdPontos = int.Parse(lines[1]);
+                coordenadas[0] = int.Parse(lines[2]);
+                coordenadas[1] = int.Parse(lines[3]);
+                altura = int.Parse(lines[4]);
+                largura = int.Parse(lines[5]);
+                rgb[0] = int.Parse(lines[6]);
+                rgb[1] = int.Parse(lines[7]);
+                rgb[2] = int.Parse(lines[8]);
+                esp = int.Parse(lines[9]);
+                Invalidate();
+            }
         }
     }
 }
